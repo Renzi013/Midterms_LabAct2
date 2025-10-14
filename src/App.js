@@ -1,21 +1,24 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+ import Reacr from "react";
+ import {BrowserRouter as Router, Routes, Route} from "react-router-dom ";
+ import NavBar from "./components/NavBar";
+ import TaskList from "./components/TaskList";
+ import AddTask from "./components/AddTask";
 
-export default App;
+ function App() {
+  return (
+    <Router>
+      <NavBar/>
+      <div className="container mt-4">
+      <Routes>
+      <Route path="/"element={<TaskList/>}/>
+      <Route path="/add"element={<AddTask/>}/>
+      </Routes>
+       </div>
+    </Router>
+
+
+  );
+  
+ }
+
+ export default App;
