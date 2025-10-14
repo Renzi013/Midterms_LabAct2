@@ -1,6 +1,6 @@
  import Reacr from "react";
  import React, {useState} from "react";
- import {BrowserRouter as Router, Routes, Route} from "react-router-dom ";
+ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
  import NavBar from "./components/NavBar";
  import TaskList from "./components/TaskList";
  import AddTask from "./components/AddTask";
