@@ -1,11 +1,13 @@
 import React from "react";
 
-function TaskList({tasks, deletTask}) {
+
+function TaskList({tasks, deleteTask}) {
     const confirmDelete = (id) => {
         if(window.confirm("Are you sure you want to delete this task?")){
-            deletTask(id);
+            deleteTask(id);
         }
     };
+
 
     return(
 <div>
@@ -21,7 +23,7 @@ function TaskList({tasks, deletTask}) {
             </tr>
         </thead>
         <tbody>
-            {tasks.lengh > 0 ?(
+            {tasks.length > 0 ?(
                 tasks.map((task) => (
                     <tr key={task.id}>
                         <td>{task.id}</td>
@@ -30,7 +32,7 @@ function TaskList({tasks, deletTask}) {
                         <td>{task.priority}</td>
                         <td>
                             <button className="btn btn-danger btn-sm"
-                            onClick={() => confirmDelete}>
+                            onClick={() => confirmDelete(task.id)}>
                                 Delete
                             </button>
                         </td>
@@ -49,3 +51,4 @@ function TaskList({tasks, deletTask}) {
 );
 }
 export default TaskList
+
