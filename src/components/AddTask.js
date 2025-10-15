@@ -50,7 +50,7 @@ function AddTask({addTask}) {
              ></textarea>
             </div>
 
-            <div className="mb=3">
+            <div className="mb-3">
                 <label>Priority</label>
                 <select
                 className="form-select"
@@ -63,7 +63,7 @@ function AddTask({addTask}) {
               </select>
             </div>
 
-            <button type="submit" className= "btn btn -primary">AddTask</button>
+            <button type="submit" className= "btn btn-primary">AddTask</button>
             </form>
             </div>
                 
